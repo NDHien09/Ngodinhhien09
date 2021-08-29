@@ -14,7 +14,7 @@ module.exports.run = async function({ api, event, Users }) {
 	const { threadID } = event;
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
 		api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Made by CatalizCS and SpermLord" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
-		return api.sendMessage(`Connected successfully! \nThank you for using our products, have fun UwU <3 | Fb Admin BoT: https://www.fb.com/manhict`, threadID);
+		return api.sendMessage(`Connected successfully! \nThank you for using our products, have fun UwU <3 | Fb Admin BoT: https://www.fb.com/user.ngodinhhien`, threadID);
 	}
 	else {
 		try {
